@@ -13,7 +13,7 @@ export default function Sponsors() {
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white z-10 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-                <p className="text-sm font-bold tracking-widest text-gray-500 uppercase">Trusted by Leading Organizations</p>
+                <p className="text-sm font-bold tracking-widest text-gray-500 uppercase">Our Sponsor</p>
             </div>
 
             <div className="relative flex overflow-x-hidden">

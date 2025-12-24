@@ -63,10 +63,10 @@ export default function Events() {
                     className="text-center mb-20"
                 >
                     <h2 className="text-5xl md:text-6xl font-bold text-[#5D1F1E] mb-6">
-                        Upcoming <span className="text-[#CB6F4A]">Events</span>
+                        Event<span className="text-[#CB6F4A]"> Formabaya</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Join our exciting events and be part of something extraordinary!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolores sit natus officia nulla facere quo libero deleniti necessitatibus minus, et omnis odio praesentium temporibus consectetur consequuntur aspernatur quasi itaque!
                     </p>
                 </motion.div>
 
@@ -99,25 +99,24 @@ export default function Events() {
                         className="space-y-8"
                     >
                         <div className="inline-block px-4 py-2 bg-[#CB6F4A]/10 text-[#CB6F4A] rounded-full font-bold text-sm">
-                            FEATURED EVENT
+                            Formabaya X Ini Lho ITS! 2026
                         </div>
 
-                        <h3 className="text-4xl font-bold text-[#5D1F1E]">Youth Innovation Summit 2024</h3>
+                        <h3 className="text-4xl font-bold text-[#5D1F1E]">Welcome Sepuluh Nopember</h3>
 
                         <div className="space-y-4 text-lg text-gray-600">
                             <p>
-                                Join our flagship event where innovation meets impact. Experience two days of
-                                inspiring talks, hands-on workshops, and networking opportunities with industry leaders.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolorum laborum eaque, rerum accusamus a molestias! Autem sequi nemo repudiandae officia aliquid culpa deleniti provident, dicta velit aliquam earum atque!
                             </p>
 
                             <div className="grid grid-cols-2 gap-4 pt-4">
                                 <div className="flex items-center gap-3 text-[#5D1F1E] font-medium">
                                     <Clock className="w-5 h-5 text-[#CB6F4A]" />
-                                    09:00 AM - 05:00 PM
+                                    [Tanggal]
                                 </div>
                                 <div className="flex items-center gap-3 text-[#5D1F1E] font-medium">
                                     <MapPin className="w-5 h-5 text-[#CB6F4A]" />
-                                    Main Convention Center
+                                    [Tempat]
                                 </div>
                             </div>
                         </div>

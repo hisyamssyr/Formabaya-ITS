@@ -32,11 +32,8 @@ export default function VisionMission() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-20"
                 >
-                    <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-[#EECB88] text-sm font-semibold mb-6 border border-white/10 backdrop-blur-sm">
-                        Our Compass
-                    </span>
                     <h2 className="text-5xl md:text-7xl font-bold mb-8">
-                        Vision & <span className="text-[#CB6F4A]">Mission</span>
+                        Visi & <span className="text-[#CB6F4A]">Misi</span>
                     </h2>
 
                     <motion.div
@@ -44,7 +41,7 @@ export default function VisionMission() {
                         className="relative inline-block"
                     >
                         <blockquote className="text-2xl md:text-4xl font-light italic text-white/80 max-w-4xl mx-auto leading-relaxed">
-                            "Empowering Youth Through Innovation"
+                            "[Slogan Formabaya]"
                         </blockquote>
                         <Sparkles className="absolute -top-8 -right-8 w-8 h-8 text-[#EECB88] animate-pulse" />
                     </motion.div>
@@ -67,13 +64,21 @@ export default function VisionMission() {
                                 <Target className="w-8 h-8 text-white" />
                             </div>
 
-                            <h3 className="text-4xl font-bold mb-6 group-hover:text-[#EECB88] transition-colors">Vision</h3>
-
-                            <p className="text-xl leading-relaxed text-white/80 group-hover:text-white transition-colors">
-                                To be a leading platform for educational and community development,
-                                inspiring positive change across Indonesia by nurturing a generation
-                                of innovative problem-solvers.
-                            </p>
+                            <h3 className="text-4xl font-bold mb-6 group-hover:text-[#EECB88] transition-colors">Visi</h3>
+                            
+                            <ul className="space-y-4 text-xl text-white/80">
+                                {[
+                                    'Organize impactful educational events',
+                                    'Foster meaningful strategic partnerships',
+                                    'Inspire lasting community change',
+                                    'Develop future-ready leadership skills'
+                                ].map((item, index) => (
+                                    <li key={index} className="flex items-start gap-3 group-hover:text-white transition-colors">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#CB6F4A] mt-2.5" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </motion.div>
 
@@ -93,7 +98,7 @@ export default function VisionMission() {
                                 <Rocket className="w-8 h-8 text-white" />
                             </div>
 
-                            <h3 className="text-4xl font-bold mb-6 group-hover:text-[#EECB88] transition-colors">Mission</h3>
+                            <h3 className="text-4xl font-bold mb-6 group-hover:text-[#EECB88] transition-colors">Misi</h3>
 
                             <ul className="space-y-4 text-xl text-white/80">
                                 {[

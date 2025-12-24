@@ -1,13 +1,12 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import AboutUs from '@/components/AboutUs';
-import VisionMission from '@/components/VisionMission';
-import Activities from '@/components/Activities';
-import Events from '@/components/Events';
-import Sponsors from '@/components/Sponsors';
-import Footer from '@/components/Footer';
-import ScrollProgress from '@/components/ScrollProgress';
-import Newsletter from '@/components/Newsletter';
+import Navbar from '@/components/navbar';
+import Hero from '@/components/hero';
+import AboutUs from '@/components/about';
+import VisionMission from '@/components/vision';
+import Activities from '@/components/activities';
+import Events from '@/components/events';
+import Sponsors from '@/components/sponsors';
+import Footer from '@/components/footer';
+import ScrollProgress from '@/components/scroll';
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <VisionMission />
       <Activities />
       <Events />
-      <Newsletter />
       <Sponsors />
       <Footer />
     </main>

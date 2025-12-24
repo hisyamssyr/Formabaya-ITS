@@ -61,8 +61,7 @@ export default function Activities() {
                         Our <span className="text-[#CB6F4A]">Activities</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Discover the impactful programs and events we organize to empower youth
-                        and strengthen communities.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed molestias perferendis ducimus repellat corrupti temporibus officiis nisi quisquam quod eius dicta voluptatibus, dignissimos delectus dolorum quae, earum ullam. Laborum, veniam.
                     </p>
                 </motion.div>
 
@@ -98,10 +97,6 @@ export default function Activities() {
                                 <p className="text-white/80 text-lg leading-relaxed mb-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
                                     {activity.description}
                                 </p>
-
-                                <button className="flex items-center gap-2 text-white font-semibold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-200">
-                                    Explore Details <ArrowRight className="w-5 h-5" />
-                                </button>
                             </div>
                         </motion.div>
                     ))}

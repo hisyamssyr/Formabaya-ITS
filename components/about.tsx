@@ -49,8 +49,8 @@ export default function AboutUs() {
                             transition={{ delay: 0.5 }}
                             className="absolute bottom-10 -right-10 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block"
                         >
-                            <div className="text-4xl font-bold text-[#CB6F4A] mb-1">5+</div>
-                            <div className="text-sm font-semibold text-gray-600">Years of Impact</div>
+                            <div className="text-4xl font-bold text-[#CB6F4A] mb-1">50+</div>
+                            <div className="text-sm font-semibold text-gray-600">Members</div>
                         </motion.div>
                     </div>
 
@@ -64,22 +64,19 @@ export default function AboutUs() {
                         >
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="w-12 h-[2px] bg-[#CB6F4A]" />
-                                <span className="uppercase tracking-widest text-sm font-bold text-[#CB6F4A]">About Us</span>
+                                <span className="uppercase tracking-widest text-sm font-bold text-[#CB6F4A]">About</span>
                             </div>
 
                             <h2 className="text-5xl md:text-6xl font-bold text-[#5D1F1E] mb-8 leading-tight">
-                                We Are <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CB6F4A] to-[#AB4F41]">Formabaya</span>
+                                Formabaya <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CB6F4A] to-[#AB4F41]">ITS</span>
                             </h2>
 
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
-                                    Formabaya is more than just an organization; we are a movement dedicated to empowering youth
-                                    through innovative educational programs and community engagement.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam at in cum quae excepturi repellat sequi eligendi officia soluta temporibus animi ab quia quibusdam perferendis, ex eaque! Corrupti, repudiandae praesentium.
                                 </p>
                                 <p>
-                                    Founded with the belief that every young person deserves the opportunity to shine,
-                                    we bridge the gap between education and real-world impact through mentorship,
-                                    workshops, and collaborative projects.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo odio facilis reiciendis minus magnam ducimus nobis voluptas quo facere harum vel aut, est recusandae, veritatis, dolorem blanditiis suscipit soluta eligendi?
                                 </p>
                             </div>
 
@@ -104,7 +101,7 @@ export default function AboutUs() {
                                 whileTap={{ scale: 0.95 }}
                                 className="mt-10 px-8 py-4 bg-[#5D1F1E] text-white rounded-full font-bold flex items-center gap-2 group hover:bg-[#CB6F4A] transition-colors duration-300"
                             >
-                                Read Our Story
+                                After Movie Formabaya 2025
                                 <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
                             </motion.button>
                         </motion.div>

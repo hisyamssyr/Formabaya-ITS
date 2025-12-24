@@ -23,7 +23,7 @@ export default function Hero() {
     };
 
     const stats = [
-        { icon: Users, value: '500+', label: 'Event Participants' },
+        { icon: Users, value: '100+', label: 'Event Participants' },
         { icon: School, value: '20+', label: 'Schools Visited' },
         { icon: UserCheck, value: '50+', label: 'Committee Members' },
     ];
@@ -52,7 +52,7 @@ export default function Hero() {
                     >
                         <span className="px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white/80 text-sm font-medium mb-8 inline-flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-[#CB6F4A] animate-pulse" />
-                            Empowering Youth Innovation
+                            Formabaya X Ini Lho ITS! 2026
                         </span>
                     </motion.div>
 
@@ -67,7 +67,7 @@ export default function Hero() {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CB6F4A] to-white inline-block">Form</span>abaya
                         </h1>
                         <p className="text-2xl md:text-4xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed">
-                            Building the next generation of <span className="font-semibold text-[#EECB88]">leaders</span> and <span className="font-semibold text-[#EECB88]">innovators</span>
+                            Forum Mahasiswa <span className="font-semibold text-[#EECB88]">Blitar</span> - <span className="font-semibold text-[#EECB88]">Surabaya</span>
                         </p>
                     </motion.div>
 
@@ -83,7 +83,7 @@ export default function Hero() {
                             className="group relative px-8 py-4 bg-[#CB6F4A] text-white font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-[#CB6F4A]/30"
                         >
                             <span className="relative z-10 flex items-center gap-2">
-                                Join Our Events
+                                Join TryOut WSN 2026
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
