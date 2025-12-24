@@ -1,3 +1,4 @@
+
 'use client';
 
 import { motion } from 'framer-motion';
@@ -34,6 +35,30 @@ export default function Activities() {
                 'Building stronger teams through collaborative activities. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
             image: '/activity-4.png',
         },
+        {
+            title: 'Team Building',
+            description:
+                'Building stronger teams through collaborative activities. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+            image: '/activity-4.png',
+        },
+        {
+            title: 'Team Building',
+            description:
+                'Building stronger teams through collaborative activities. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+            image: '/activity-4.png',
+        },
+        {
+            title: 'Team Building',
+            description:
+                'Building stronger teams through collaborative activities. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+            image: '/activity-4.png',
+        },
+        {
+            title: 'Team Building',
+            description:
+                'Building stronger teams through collaborative activities. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+            image: '/activity-4.png',
+        },
     ];
 
     return (
@@ -44,10 +69,10 @@ export default function Activities() {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-blue-900 text-center mb-4">
+                    <h2 className="text-5xl md:text-6xl font-bold text-blue-900 text-center mb-4">
                         Our <span className="text-green-500">Activities</span>
                     </h2>
-                    <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    <p className="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
                         Discover the impactful programs and events we organize to empower youth
                         and strengthen communities.
                     </p>
@@ -72,10 +97,10 @@ export default function Activities() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-xl font-bold text-blue-900 mb-3 group-hover:text-green-500 transition-colors duration-300">
+                                    <h3 className="text-2xl font-bold text-blue-900 mb-3 group-hover:text-green-500 transition-colors duration-300">
                                         {activity.title}
                                     </h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                    <p className="text-gray-600 text-base leading-relaxed">
                                         {activity.description}
                                     </p>
                                 </div>

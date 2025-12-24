@@ -17,7 +17,7 @@ export default function AboutUs() {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-blue-900 text-center mb-12">
+                    <h2 className="text-5xl md:text-6xl font-bold text-blue-900 text-center mb-12">
                         About <span className="text-green-500">Formabaya</span>
                     </h2>
 
@@ -45,13 +45,13 @@ export default function AboutUs() {
                             transition={{ delay: 0.4, duration: 0.8 }}
                             className="space-y-6"
                         >
-                            <p className="text-lg text-gray-700 leading-relaxed">
+                            <p className="text-xl text-gray-700 leading-relaxed">
                                 Formabaya is a dynamic organization dedicated to empowering youth
                                 through innovative educational programs and community engagement.
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <p className="text-lg text-gray-700 leading-relaxed">
+                            <p className="text-xl text-gray-700 leading-relaxed">
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                                 reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -60,13 +60,13 @@ export default function AboutUs() {
                             <div className="pt-4">
                                 <div className="flex items-center space-x-4 mb-4">
                                     <div className="w-12 h-1 bg-green-500"></div>
-                                    <span className="text-blue-900 font-semibold">
+                                    <span className="text-lg text-blue-900 font-semibold">
                                         Building Future Leaders
                                     </span>
                                 </div>
                                 <div className="flex items-center space-x-4">
                                     <div className="w-12 h-1 bg-green-500"></div>
-                                    <span className="text-blue-900 font-semibold">
+                                    <span className="text-lg text-blue-900 font-semibold">
                                         Creating Lasting Impact
                                     </span>
                                 </div>

@@ -81,10 +81,10 @@ export default function Events() {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-blue-900 text-center mb-4">
+                    <h2 className="text-5xl md:text-6xl font-bold text-blue-900 text-center mb-4">
                         Upcoming <span className="text-green-500">Events</span>
                     </h2>
-                    <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    <p className="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
                         Join our exciting events and be part of something extraordinary!
                     </p>
 
@@ -112,7 +112,7 @@ export default function Events() {
                             transition={{ delay: 0.4, duration: 0.8 }}
                             className="space-y-6"
                         >
-                            <p className="text-lg text-gray-700 leading-relaxed">
+                            <p className="text-xl text-gray-700 leading-relaxed">
                                 Join our exciting events and be part of a transformative
                                 experience! Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -120,7 +120,7 @@ export default function Events() {
                             </p>
 
                             <div>
-                                <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                                <h3 className="text-3xl font-bold text-blue-900 mb-4">
                                     How to Join
                                 </h3>
                                 <ul className="space-y-3">
@@ -132,7 +132,7 @@ export default function Events() {
                                     ].map((step, index) => (
                                         <li key={index} className="flex items-start">
                                             <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                                            <span className="text-gray-700">{step}</span>
+                                            <span className="text-lg text-gray-700">{step}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -147,7 +147,7 @@ export default function Events() {
                         transition={{ delay: 0.6, duration: 0.8 }}
                         className="mb-16"
                     >
-                        <h3 className="text-3xl font-bold text-blue-900 text-center mb-8">
+                        <h3 className="text-4xl font-bold text-blue-900 text-center mb-8">
                             Frequently Asked Questions
                         </h3>
                         <div className="max-w-3xl mx-auto space-y-4">
@@ -160,7 +160,7 @@ export default function Events() {
                                         onClick={() => setOpenFaq(openFaq === index ? null : index)}
                                         className="w-full px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                                     >
-                                        <span className="font-semibold text-blue-900 text-left">
+                                        <span className="text-lg font-semibold text-blue-900 text-left">
                                             {faq.question}
                                         </span>
                                         <ChevronDown
@@ -177,7 +177,7 @@ export default function Events() {
                                         transition={{ duration: 0.3 }}
                                         className="overflow-hidden"
                                     >
-                                        <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
+                                        <p className="px-6 pb-4 text-lg text-gray-600">{faq.answer}</p>
                                     </motion.div>
                                 </div>
                             ))}
@@ -190,7 +190,7 @@ export default function Events() {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ delay: 0.8, duration: 0.8 }}
                     >
-                        <h3 className="text-3xl font-bold text-blue-900 text-center mb-8">
+                        <h3 className="text-4xl font-bold text-blue-900 text-center mb-8">
                             What People Say
                         </h3>
                         <div className="max-w-3xl mx-auto">
@@ -206,7 +206,7 @@ export default function Events() {
                                     transition={{ duration: 0.5 }}
                                     className="relative z-10"
                                 >
-                                    <p className="text-lg text-gray-700 italic mb-6 leading-relaxed">
+                                    <p className="text-xl text-gray-700 italic mb-6 leading-relaxed">
                                         {testimonials[currentTestimonial].quote}
                                     </p>
                                     <div className="flex items-center">
@@ -214,10 +214,10 @@ export default function Events() {
                                             {testimonials[currentTestimonial].avatar}
                                         </div>
                                         <div>
-                                            <div className="font-bold text-blue-900">
+                                            <div className="text-lg font-bold text-blue-900">
                                                 {testimonials[currentTestimonial].name}
                                             </div>
-                                            <div className="text-sm text-gray-600">
+                                            <div className="text-base text-gray-600">
                                                 {testimonials[currentTestimonial].role}
                                             </div>
                                         </div>
@@ -249,8 +249,8 @@ export default function Events() {
                                             key={index}
                                             onClick={() => setCurrentTestimonial(index)}
                                             className={`w-2 h-2 rounded-full transition-all duration-300 ${currentTestimonial === index
-                                                    ? 'bg-green-500 w-8'
-                                                    : 'bg-gray-300'
+                                                ? 'bg-green-500 w-8'
+                                                : 'bg-gray-300'
                                                 }`}
                                             aria-label={`Go to testimonial ${index + 1}`}
                                         />

@@ -21,7 +21,7 @@ export default function VisionMission() {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+                    <h2 className="text-5xl md:text-6xl font-bold text-center mb-8">
                         Our Vision & <span className="text-green-400">Mission</span>
                     </h2>
 
@@ -32,7 +32,7 @@ export default function VisionMission() {
                         transition={{ delay: 0.2, duration: 0.8 }}
                         className="text-center mb-16"
                     >
-                        <blockquote className="text-2xl md:text-4xl font-light italic text-green-400 mb-4">
+                        <blockquote className="text-3xl md:text-5xl font-light italic text-green-400 mb-4">
                             "Empowering Youth Through Innovation"
                         </blockquote>
                         <div className="w-24 h-1 bg-green-400 mx-auto"></div>
@@ -48,9 +48,9 @@ export default function VisionMission() {
                         >
                             <div className="flex items-center mb-6">
                                 <Target className="w-10 h-10 text-green-400 mr-4" />
-                                <h3 className="text-3xl font-bold">Vision</h3>
+                                <h3 className="text-4xl font-bold">Vision</h3>
                             </div>
-                            <p className="text-lg leading-relaxed text-white/90">
+                            <p className="text-xl leading-relaxed text-white/90">
                                 To be a leading platform for educational and community development,
                                 inspiring positive change across Indonesia. Lorem ipsum dolor sit
                                 amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -68,9 +68,9 @@ export default function VisionMission() {
                         >
                             <div className="flex items-center mb-6">
                                 <Rocket className="w-10 h-10 text-green-400 mr-4" />
-                                <h3 className="text-3xl font-bold">Mission</h3>
+                                <h3 className="text-4xl font-bold">Mission</h3>
                             </div>
-                            <p className="text-lg leading-relaxed text-white/90">
+                            <p className="text-xl leading-relaxed text-white/90">
                                 Organize impactful events, foster meaningful partnerships, and
                                 inspire lasting change in our communities. Lorem ipsum dolor sit
                                 amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt

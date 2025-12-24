@@ -39,22 +39,39 @@ export default function Navbar() {
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-blue-900 shadow-lg' : 'bg-transparent'
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
-                    {/* Logo */}
+            <div className="w-full">
+                <div className="flex items-center h-16 relative">
+                    {/* Logo - Left */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="flex items-center cursor-pointer"
+                        className="flex items-center cursor-pointer pl-16 gap-3"
                         onClick={() => scrollToSection('home')}
                     >
-                        <div className="text-2xl font-bold text-white">
+                        {/* Logo Icon */}
+                        <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
+                            <svg
+                                className="w-6 h-6 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                                />
+                            </svg>
+                        </div>
+                        {/* Logo Text */}
+                        <div className="text-3xl font-bold text-white">
                             <span className="text-green-400">Form</span>abaya
                         </div>
                     </motion.div>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:flex space-x-8">
+                    {/* Desktop Navigation - Center */}
+                    <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8">
                         {navLinks.map((link, index) => (
                             <motion.button
                                 key={link.id}

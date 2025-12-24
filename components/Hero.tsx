@@ -30,10 +30,10 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="mb-8"
                 >
-                    <h1 className="text-6xl md:text-8xl font-bold text-white mb-4">
+                    <h1 className="text-7xl md:text-9xl font-bold text-white mb-4">
                         <span className="text-green-400">Form</span>abaya
                     </h1>
-                    <p className="text-xl md:text-2xl text-white/90 font-light">
+                    <p className="text-2xl md:text-3xl text-white/90 font-light">
                         Empowering Youth Through Innovation
                     </p>
                 </motion.div>
@@ -56,10 +56,10 @@ export default function Hero() {
                                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                             >
                                 <Icon className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                                <div className="text-4xl font-bold text-white mb-2">
+                                <div className="text-5xl font-bold text-white mb-2">
                                     {stat.value}
                                 </div>
-                                <div className="text-white/80 font-medium">{stat.label}</div>
+                                <div className="text-lg text-white/80 font-medium">{stat.label}</div>
                             </motion.div>
                         );
                     })}
