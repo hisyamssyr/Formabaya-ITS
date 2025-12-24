@@ -7,8 +7,12 @@ html {
 
 /* Custom CSS Variables */
 :root {
-  --navy: #1e3a8a;
-  --green: #10b981;
+  --cream: #FAF7EB;
+  --beige: #EECB88;
+  --peach: #EB975E;
+  --terracotta: #CB6F4A;
+  --burgundy: #AB4F41;
+  --dark-brown: #5D1F1E;
   --white: #ffffff;
 }
 
@@ -21,57 +25,156 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cream);
+  color: var(--dark-brown);
+  overflow-x: hidden;
 }
 
-/* Animation utilities */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Advanced Animation Keyframes */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  to {
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes slide-up-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
   }
 }
 
-.fade-in {
-  animation: fadeIn 0.6s ease-out;
+/* Animation Utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-.slide-in-left {
-  animation: slideInLeft 0.6s ease-out;
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
 }
 
-.slide-in-right {
-  animation: slideInRight 0.6s ease-out;
+.animate-blob {
+  animation: blob 7s infinite;
 }
 
-/* Utility classes */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.glass-dark {
+  background: rgba(93, 31, 30, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Backgrounds */
+.gradient-navy-white {
+  background: linear-gradient(180deg, var(--dark-brown) 0%, var(--burgundy) 50%, var(--terracotta) 100%);
+}
+
+.gradient-mesh {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(at 0% 0%, hsla(27, 91%, 68%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(11, 43%, 24%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(50, 76%, 73%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(11, 39%, 46%, 0.1) 0px, transparent 50%);
+}
+
+/* Typography Utilities */
+.text-gradient {
+  background: linear-gradient(to right, var(--dark-brown), var(--terracotta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-light {
+  background: linear-gradient(to right, #ffffff, var(--beige));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section Styling */
 .section-padding {
   padding: 5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -80,11 +183,20 @@ body {
   }
 }
 
-/* Gradient backgrounds */
-.gradient-navy-white {
-  background: linear-gradient(180deg, var(--navy) 0%, var(--white) 100%);
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.gradient-white-navy {
-  background: linear-gradient(180deg, var(--white) 0%, rgba(30, 58, 138, 0.1) 100%);
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--terracotta);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--burgundy);
 }

@@ -1,85 +1,116 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Target, Rocket } from 'lucide-react';
+import { Target, Rocket, Sparkles } from 'lucide-react';
 
 export default function VisionMission() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: '-100px' });
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
     return (
         <section
             id="vision"
-            className="section-padding bg-blue-900 text-white"
-            ref={ref}
+            className="section-padding bg-[#5D1F1E] text-white overflow-hidden relative"
+            ref={containerRef}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Background Elements */}
+            <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,_#CB6F4A_0%,_transparent_50%)]" />
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
+                    className="text-center mb-20"
                 >
-                    <h2 className="text-5xl md:text-6xl font-bold text-center mb-8">
-                        Our Vision & <span className="text-green-400">Mission</span>
+                    <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-[#EECB88] text-sm font-semibold mb-6 border border-white/10 backdrop-blur-sm">
+                        Our Compass
+                    </span>
+                    <h2 className="text-5xl md:text-7xl font-bold mb-8">
+                        Vision & <span className="text-[#CB6F4A]">Mission</span>
                     </h2>
 
-                    {/* Slogan */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                        className="text-center mb-16"
+                        style={{ y }}
+                        className="relative inline-block"
                     >
-                        <blockquote className="text-3xl md:text-5xl font-light italic text-green-400 mb-4">
+                        <blockquote className="text-2xl md:text-4xl font-light italic text-white/80 max-w-4xl mx-auto leading-relaxed">
                             "Empowering Youth Through Innovation"
                         </blockquote>
-                        <div className="w-24 h-1 bg-green-400 mx-auto"></div>
+                        <Sparkles className="absolute -top-8 -right-8 w-8 h-8 text-[#EECB88] animate-pulse" />
+                    </motion.div>
+                </motion.div>
+
+                <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    {/* Vision Card */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        whileHover={{ y: -10 }}
+                        className="group relative bg-white/5 backdrop-blur-lg rounded-[2rem] p-10 border border-white/10 overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#CB6F4A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div className="relative z-10">
+                            <div className="w-16 h-16 bg-gradient-to-br from-[#CB6F4A] to-[#AB4F41] rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                                <Target className="w-8 h-8 text-white" />
+                            </div>
+
+                            <h3 className="text-4xl font-bold mb-6 group-hover:text-[#EECB88] transition-colors">Vision</h3>
+
+                            <p className="text-xl leading-relaxed text-white/80 group-hover:text-white transition-colors">
+                                To be a leading platform for educational and community development,
+                                inspiring positive change across Indonesia by nurturing a generation
+                                of innovative problem-solvers.
+                            </p>
+                        </div>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 gap-12">
-                        {/* Vision */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-                            transition={{ delay: 0.4, duration: 0.8 }}
-                            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
-                        >
-                            <div className="flex items-center mb-6">
-                                <Target className="w-10 h-10 text-green-400 mr-4" />
-                                <h3 className="text-4xl font-bold">Vision</h3>
-                            </div>
-                            <p className="text-xl leading-relaxed text-white/90">
-                                To be a leading platform for educational and community development,
-                                inspiring positive change across Indonesia. Lorem ipsum dolor sit
-                                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris.
-                            </p>
-                        </motion.div>
+                    {/* Mission Card */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        whileHover={{ y: -10 }}
+                        className="group relative bg-white/5 backdrop-blur-lg rounded-[2rem] p-10 border border-white/10 overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#CB6F4A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                        {/* Mission */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-                            transition={{ delay: 0.6, duration: 0.8 }}
-                            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
-                        >
-                            <div className="flex items-center mb-6">
-                                <Rocket className="w-10 h-10 text-green-400 mr-4" />
-                                <h3 className="text-4xl font-bold">Mission</h3>
+                        <div className="relative z-10">
+                            <div className="w-16 h-16 bg-gradient-to-br from-[#CB6F4A] to-[#AB4F41] rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                                <Rocket className="w-8 h-8 text-white" />
                             </div>
-                            <p className="text-xl leading-relaxed text-white/90">
-                                Organize impactful events, foster meaningful partnerships, and
-                                inspire lasting change in our communities. Lorem ipsum dolor sit
-                                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore.
-                            </p>
-                        </motion.div>
-                    </div>
-                </motion.div>
+
+                            <h3 className="text-4xl font-bold mb-6 group-hover:text-[#EECB88] transition-colors">Mission</h3>
+
+                            <ul className="space-y-4 text-xl text-white/80">
+                                {[
+                                    'Organize impactful educational events',
+                                    'Foster meaningful strategic partnerships',
+                                    'Inspire lasting community change',
+                                    'Develop future-ready leadership skills'
+                                ].map((item, index) => (
+                                    <li key={index} className="flex items-start gap-3 group-hover:text-white transition-colors">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#CB6F4A] mt-2.5" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );
