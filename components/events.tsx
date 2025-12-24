@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
-import { ChevronDown, CheckCircle, Calendar, MapPin, Clock } from 'lucide-react';
+import { ChevronDown, CheckCircle, Calendar, MapPin, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Events() {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -52,6 +52,14 @@ export default function Events() {
         },
     ];
 
+    const nextTestimonial = () => {
+        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    };
+
+    const prevTestimonial = () => {
+        setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    };
+
     return (
         <section id="events" className="section-padding gradient-white-navy relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,13 +79,17 @@ export default function Events() {
                 </motion.div>
 
                 {/* Featured Event */}
+                <div className="w-fit mx-auto px-4 py-2 bg-[#CB6F4A]/10 text-[#CB6F4A] rounded-full font-bold text-sm mb-12">
+                    Formabaya X Ini Lho ITS! 2026
+                </div>
+
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl group"
+                        className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl group"
                     >
                         <Image
                             src="/event-poster.png"
@@ -98,9 +110,7 @@ export default function Events() {
                         transition={{ duration: 0.8 }}
                         className="space-y-8"
                     >
-                        <div className="inline-block px-4 py-2 bg-[#CB6F4A]/10 text-[#CB6F4A] rounded-full font-bold text-sm">
-                            Formabaya X Ini Lho ITS! 2026
-                        </div>
+
 
                         <h3 className="text-4xl font-bold text-[#5D1F1E]">Welcome Sepuluh Nopember</h3>
 
@@ -196,7 +206,7 @@ export default function Events() {
 
                 {/* Testimonials */}
                 <div className="text-center">
-                    <h3 className="text-4xl font-bold text-[#5D1F1E] mb-12">What People Say</h3>
+                    <h3 className="text-4xl font-bold text-[#5D1F1E] mb-12">Testimoni</h3>
 
                     <div className="max-w-4xl mx-auto">
                         <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-16 relative overflow-hidden">
@@ -230,6 +240,22 @@ export default function Events() {
                                     </div>
                                 </motion.div>
                             </AnimatePresence>
+
+                            {/* Navigation Buttons */}
+                            <button
+                                onClick={prevTestimonial}
+                                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/80 hover:bg-white text-[#CB6F4A] shadow-lg transition-all duration-300 hover:scale-110 z-20"
+                                aria-label="Previous testimonial"
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </button>
+                            <button
+                                onClick={nextTestimonial}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/80 hover:bg-white text-[#CB6F4A] shadow-lg transition-all duration-300 hover:scale-110 z-20"
+                                aria-label="Next testimonial"
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </button>
 
                             {/* Controls */}
                             <div className="flex justify-center mt-12 gap-3">

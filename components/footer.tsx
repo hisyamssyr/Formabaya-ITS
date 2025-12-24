@@ -94,45 +94,33 @@ export default function Footer() {
                             </a>
                         </div>
 
-                        <div className="mt-8 flex gap-4">
+
+                    </div>
+
+                    {/* Follow Us */}
+                    <div>
+                        <h4 className="text-lg font-bold mb-6 text-[#EECB88]">Follow Us</h4>
+                        <p className="text-white/70 text-sm mb-6">Connect with us on social media for updates.</p>
+                        <div className="flex gap-4">
                             {socialLinks.map((social, index) => (
                                 <a
                                     key={index}
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#CB6F4A] transition-colors"
+                                    className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#CB6F4A] transition-colors group"
                                     aria-label={social.name}
                                 >
-                                    <social.icon className="w-5 h-5" />
+                                    <social.icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
                                 </a>
                             ))}
                         </div>
                     </div>
-
-                    {/* Newsletter (Mini) */}
-                    <div>
-                        <h4 className="text-lg font-bold mb-6 text-[#EECB88]">Stay Updated</h4>
-                        <p className="text-white/70 text-sm mb-4">Subscribe to our newsletter for the latest updates.</p>
-                        <form className="relative" onSubmit={(e) => e.preventDefault()}>
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="w-full bg-white/10 border border-white/20 rounded-full py-3 px-4 text-sm text-white focus:outline-none focus:border-[#CB6F4A] focus:bg-white/15 transition-all placeholder:text-white/30"
-                            />
-                            <button
-                                type="submit"
-                                className="absolute right-1 top-1 w-8 h-8 bg-[#CB6F4A] rounded-full flex items-center justify-center text-white hover:bg-[#AB4F41] transition-colors"
-                            >
-                                <Send className="w-3 h-3" />
-                            </button>
-                        </form>
-                    </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-white/50 text-sm">
+                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-center md:justify-end items-center gap-4 relative">
+                    <p className="text-white/50 text-sm md:absolute md:left-1/2 md:-translate-x-1/2">
                         © {currentYear} Formabaya. All rights reserved.
                     </p>
                     <button

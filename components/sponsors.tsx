@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function Sponsors() {
     const sponsors = [
-        'TechCorp', 'EduFuture', 'GreenEarth', 'InnoLab',
-        'YouthRise', 'GlobalConnect', 'FutureBuilders', 'SmartSystems'
+        'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon'
     ];
 
     return (
