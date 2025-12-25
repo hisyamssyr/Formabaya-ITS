@@ -149,9 +149,14 @@ export default function Events() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="w-full sm:w-auto px-8 py-4 bg-[#CB6F4A] hover:bg-[#AB4F41] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <a
+                                href="https://inilho.its.ac.id/dashboard/events"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto px-8 py-4 bg-[#CB6F4A] hover:bg-[#AB4F41] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+                            >
                                 Link Pendaftaran
-                            </button>
+                            </a>
                             <a
                                 href="https://drive.google.com/file/d/1_mQ21pnCmGRCCVJ4kdOKIrLUoJ3o2820/view?usp=sharing"
                                 target="_blank"

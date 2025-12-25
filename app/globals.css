@@ -3,6 +3,7 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+  font-size: 85%;
 }
 
 /* Custom CSS Variables */
