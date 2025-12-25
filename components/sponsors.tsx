@@ -1,18 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Sponsors() {
-    const sponsors = [
-        'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon'
-    ];
+    const sponsors = Array(8).fill('/pertamina2.png');
 
     return (
-        <section className="py-20 bg-white overflow-hidden relative">
+        <section className="py-8 bg-white overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white z-10 pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-                <p className="text-sm font-bold tracking-widest text-gray-500 uppercase">Our Sponsor</p>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
+                <p className="text-3xl font-bold tracking-widest text-gray-600 uppercase">Our Sponsor</p>
             </div>
 
             <div className="relative flex overflow-x-hidden">
@@ -26,14 +25,19 @@ export default function Sponsors() {
                             ease: "linear",
                         },
                     }}
-                    className="flex whitespace-nowrap gap-16 py-4"
+                    className="flex whitespace-nowrap gap-16 py-4 items-center"
                 >
-                    {[...sponsors, ...sponsors, ...sponsors].map((sponsor, index) => (
+                    {[...sponsors, ...sponsors].map((sponsor, index) => (
                         <div
                             key={index}
-                            className="text-4xl font-bold text-gray-300 hover:text-[#CB6F4A] transition-colors duration-300 cursor-pointer"
+                            className="relative w-100 h-50 transition-all duration-300 cursor-pointer hover:scale-105"
                         >
-                            {sponsor}
+                            <Image
+                                src={sponsor}
+                                alt="Sponsor Logo"
+                                fill
+                                className="object-contain"
+                            />
                         </div>
                     ))}
                 </motion.div>

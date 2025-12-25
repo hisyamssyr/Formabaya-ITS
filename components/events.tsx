@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
-import { ChevronDown, CheckCircle, Calendar, MapPin, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronDown, CheckCircle, Calendar, MapPin, Clock, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
 
 export default function Events() {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -122,17 +122,17 @@ export default function Events() {
                             <div className="grid grid-cols-2 gap-4 pt-4">
                                 <div className="flex items-center gap-3 text-[#5D1F1E] font-medium">
                                     <Clock className="w-5 h-5 text-[#CB6F4A]" />
-                                    [Tanggal]
+                                    Minggu, 25 Januari 2026
                                 </div>
                                 <div className="flex items-center gap-3 text-[#5D1F1E] font-medium">
                                     <MapPin className="w-5 h-5 text-[#CB6F4A]" />
-                                    [Tempat]
+                                    TBA
                                 </div>
                             </div>
                         </div>
 
                         <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                            <h4 className="text-xl font-bold text-[#5D1F1E] mb-4">Registration Steps</h4>
+                            <h4 className="text-xl font-bold text-[#5D1F1E] mb-4">Benefits</h4>
                             <ul className="space-y-3">
                                 {[
                                     'Register via our website',
@@ -148,9 +148,20 @@ export default function Events() {
                             </ul>
                         </div>
 
-                        <button className="w-full sm:w-auto px-8 py-4 bg-[#CB6F4A] hover:bg-[#AB4F41] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                            Register Now
-                        </button>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <button className="w-full sm:w-auto px-8 py-4 bg-[#CB6F4A] hover:bg-[#AB4F41] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                Link Pendaftaran
+                            </button>
+                            <a
+                                href="https://drive.google.com/file/d/1_mQ21pnCmGRCCVJ4kdOKIrLUoJ3o2820/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-[#CB6F4A] text-[#CB6F4A] hover:bg-[#CB6F4A] hover:text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            >
+                                <BookOpen className="w-5 h-5" />
+                                Guidebook
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
 

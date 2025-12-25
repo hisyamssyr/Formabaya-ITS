@@ -1,12 +1,13 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, X } from 'lucide-react';
 
 export default function AboutUs() {
     const containerRef = useRef(null);
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
@@ -97,6 +98,7 @@ export default function AboutUs() {
                             </div>
 
                             <motion.button
+                                onClick={() => setIsVideoOpen(true)}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="mt-10 px-8 py-4 bg-[#5D1F1E] text-white rounded-full font-bold flex items-center gap-2 group hover:bg-[#CB6F4A] transition-colors duration-300"
@@ -108,6 +110,39 @@ export default function AboutUs() {
                     </div>
                 </div>
             </div>
+
+            <AnimatePresence>
+                {isVideoOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+                        onClick={() => setIsVideoOpen(false)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button
+                                onClick={() => setIsVideoOpen(false)}
+                                className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+                            >
+                                <X className="w-6 h-6" />
+                            </button>
+                            <video
+                                src="/dummyvid.mp4"
+                                className="w-full h-full object-contain"
+                                controls
+                                autoPlay
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
