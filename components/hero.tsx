@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Users, School, UserCheck, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { useRef } from 'react';
 
 export default function Hero() {
@@ -34,8 +35,19 @@ export default function Hero() {
             id="home"
             className="min-h-screen flex items-center justify-center gradient-navy-white relative overflow-hidden"
         >
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/dummy169.jpeg"
+                    alt="Hero Background"
+                    fill
+                    className="object-cover opacity-10"
+                    priority
+                />
+            </div>
+
             {/* Animated Background Elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-orange-500/20 rounded-full blur-[100px] animate-blob" />
                 <div className="absolute top-[20%] right-[-10%] w-[35%] h-[35%] bg-red-500/20 rounded-full blur-[100px] animate-blob animation-delay-2000" />
                 <div className="absolute bottom-[-10%] left-[20%] w-[30%] h-[30%] bg-yellow-500/20 rounded-full blur-[100px] animate-blob animation-delay-4000" />
